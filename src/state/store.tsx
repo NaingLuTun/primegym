@@ -1,7 +1,9 @@
 import { configureStore } from "@reduxjs/toolkit";
 
+import scheduleReducer from "./scheduleSlice/scheduleSlice"
+
 export const store = configureStore({
-    reducer: {}
+    reducer: {scheduleReducer}
 })
 
 export type RootState = ReturnType<typeof store.getState>

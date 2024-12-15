@@ -33,9 +33,9 @@ const HeaderSwiper = () => {
                 <img src={swiperImg1} alt="swiper-image-1" className='w-full brightness-50 header-swiper-img-1 header-swiper-img' />
 
                 <div className='absolute top-[50%] left-[50%] -translate-x-1/2 -translate-y-1/2 text-center text-white swiper-texts-container'>
-                    <p className={`font-[800] mb-[10px] ${isLargeScreen? "text-[20px]" : isMediumScreen? "text-[16px]" : "text-[12px]"}`}>BEST GYM CENTER</p>
+                    <h3 className={`font-[800] mb-[10px] ${isLargeScreen? "text-[20px]" : isMediumScreen? "text-[16px]" : "text-[12px]"}`}>BEST GYM CENTER</h3>
 
-                    <p className={`font-[800] mb-[10px] ${isLargeScreen? "text-[45px]" : isMediumScreen? "text-[30px]" :  "text-[20px]"}`}>BUILD YOUR BODY STRONG WITH PRIMEGYM</p>
+                    <h2 className={`font-[800] mb-[10px] ${isLargeScreen? "text-[45px]" : isMediumScreen? "text-[30px]" :  "text-[20px]"}`}>BUILD YOUR BODY STRONG WITH PRIMEGYM</h2>
                     
                     <div className='flex gap-3 justify-center'>
                         <button 
