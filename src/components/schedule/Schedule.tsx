@@ -71,10 +71,10 @@ const Schedule = () => {
 
             <div className={`grid mt-8 ${isLargeScreen? "grid-cols-4 gap-[40px]" : isMediumScreen? "grid-cols-2 gap-[20px]" : "grid-cols-1 gap-[20px]"} schedulesContainer`}>
                 {hours.map((hour, index) => (
-                    <div key={hour} className={`${dayChanged? "reveal-schedule-animation" : ""} bg-[#232429] rounded-md p-10 text-white font-[500] text-center individual-schedule-container`}>
-                        <p>{hour}</p>
-                        <p className='mt-3 mb-3 text-[#fb5b20] text-[20px] programs'>{programs[index].toUpperCase()}</p>
-                        <p className='font-[300] trainers'>{trainers[index].toUpperCase()}</p>
+                    <div key={hour} className={`${dayChanged? "reveal-schedule-animation" : ""} bg-[#232429] rounded-md p-6 pt-10 pb-10 flex flex-col justify-center items-center font-[500] text-center individual-schedule-container`}>
+                        <p className='text-white text-nowrap'>{hour}</p>
+                        <p className='mt-3 mb-3 text-nowrap text-[#fb5b20] text-[20px] programs'>{programs[index].toUpperCase()}</p>
+                        <p className='font-[300] text-nowrap text-white trainers'>{trainers[index].toUpperCase()}</p>
                     </div>
                 ))}
             </div>

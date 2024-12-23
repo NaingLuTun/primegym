@@ -13,7 +13,7 @@
     }
 
     html, body, #root {
-        height: 100%;
+        height: fit-content;
     }
 }
 
@@ -103,6 +103,11 @@
     .reveal-schedule-animation {
         opacity: 0;
         animation: reveal 0.5s ease-in-out forwards;
+    }
+
+    .reveal-stats {
+        opacity: 0;
+        animation: reveal 3s ease-in-out forwards;
     }
 
     @keyframes reveal {

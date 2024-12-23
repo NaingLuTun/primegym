@@ -12,7 +12,7 @@ const About = () => {
         </div>
         <div className={`${isLargeScreen? "w-[55%]" : "w-full"} about-texts-container`}>
             <h3 className={`${isLargeScreen? "text-[20px]" : "text-[18px]"} text-[#fb5b20] font-[600] about-sub-heading`}>ABOUT US</h3>
-            <h2 className={`${isLargeScreen? "text-[45px]": isMediumScreen? "text-[30px]": "text-[25px]"} font-[800] text-nowrap text-[#232429] about-heading`}>WELCOME TO PRIMEGYM</h2>
+            <h2 className={`${isLargeScreen? "text-[42.5px]": isMediumScreen? "text-[30px]": "text-[25px]"} font-[800] text-nowrap text-[#232429] about-heading`}>WELCOME TO PRIMEGYM</h2>
 
             <p className={`${isLargeScreen? "text-[20px]" : "text-[18px]"} text-[#535353] font-[600] mt-3 mb-3 heading-sub-text-1`}>At PRIMEGYM, we help you achieve your fitness goals with expert trainers and state of the art facilities, whether you're a beginner or a seasoned athlete.</p>
 
