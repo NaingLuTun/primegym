@@ -8,7 +8,7 @@ import trainersIcon from "../../assets/stats-icons/users-three-svgrepo-com.svg"
 import projectsIcon from "../../assets/stats-icons/checkmark2-svgrepo-com.svg"
 import clientsIcon from "../../assets/stats-icons/coffee-svgrepo-com.svg"
 
-interface Stats {
+interface StatsType {
     statName: string,
     totalNum: number,
     startNum: number,
@@ -19,7 +19,7 @@ const Stats = () => {
     const isMediumScreen = useMediaQuery({query: "(min-width: 768px)"})
     const isLargeScreen = useMediaQuery({query: "(min-width: 1024px)"})
 
-    const [stats, setStats] = useState<Stats[]>(
+    const [stats, setStats] = useState<StatsType[]>(
        [
         {
             statName: "EXPERIENCE",
@@ -79,7 +79,7 @@ const Stats = () => {
                     </div>
 
                     <div className=" statTextsContainer">
-                        <p className="text-[#c9c9c9] text-[15px]">{stat.statName}</p>
+                        <p className="text-[#c9c9c9] text-[15px] font-[500]">{stat.statName}</p>
                         <p className="text-white text-[25px] font-[500]">{stat.startNum}</p>
                     </div>
                 </div>

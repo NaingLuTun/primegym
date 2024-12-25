@@ -3,6 +3,7 @@ import About from "./components/about/About"
 import Program from "./components/program/Program"
 import Schedule from "./components/schedule/Schedule"
 import Stats from "./components/stats/Stats"
+import Team from "./components/team/Team"
 function App() {
 
   return (
@@ -12,6 +13,7 @@ function App() {
       <Program />
       <Schedule />
       <Stats />
+      <Team />
     </>
   )
 }

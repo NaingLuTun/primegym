@@ -43,7 +43,7 @@ const Program = () => {
                     <h2 className={`${isLargeScreen? "text-[45px] text-nowrap": isMediumScreen? "text-[30px]" : "text-[25px]"} text-white text-center  font-[800]`}>
                         30% DISCOUNT FOR THIS SUMMER
                     </h2>
-                    <button className="text-white w-fit bg-[#fb5b20] p-3 pr-6 pl-6 rounded-md">
+                    <button className="text-white w-fit bg-[#fb5b20] p-3 pr-6 pl-6 rounded-md transition-all duration-500 hover:text-black">
                         BECOME A MEMBER
                     </button>
                 </div>

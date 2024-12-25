@@ -41,7 +41,7 @@ const Schedule = () => {
         <div className={`${isLargeScreen? "p-[40px]" : "p-[20px]"}`}>
             <div className='mb-8 text-center schedule-header-container'>
                 <h3 className={`${isLargeScreen? "text-[20px]" : "text-[18px]"} text-[#fb5b20] font-[600] about-sub-heading`}>CLASS SCHEDULE</h3>
-                <h2 className={`${isLargeScreen? "text-[45px]": isMediumScreen? "text-[30px]" : "text-[25px]"} text-[#232429] text-center  font-[800]`}>WORKING HOURS</h2>
+                <h2 className={`${isLargeScreen? "text-[45px]": isMediumScreen? "text-[30px]" : "text-[25px]"} text-[#232429] text-center  font-[800] about-main-heading`}>WORKING HOURS</h2>
             </div>
 
             {isLargeScreen? 
