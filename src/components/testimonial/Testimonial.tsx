@@ -20,12 +20,12 @@ const Testimonial = () => {
     const text = "PrimeGym has completely transformed my fitness journey! The trainers are incredibly supportive, and the programs are tailored to suit all fitness levels. The state-of-the-art equipment and motivating atmosphere make every workout enjoyable and effective. I’ve achieved goals I never thought possible!"
     return (
         <div className={`flex  w-full bg-[#232429] ${isLargeScreen? "flex-row": "flex-col"}`}>
-            <div className={`${isLargeScreen? "w-[50%]": "w-full"} overflow-hidden main-testimonial-img-container`}>
-                <img src={testimonialMainImg} alt="testimonial" className="scale-[] w-full" />
+            <div className={`${isLargeScreen? "w-[50%] h-[800px]": isMediumScreen ? "w-full h-[800px]" : "w-full h-[500px]"} overflow-hidden relative flex-grow  main-testimonial-img-container`}>
+                <img src={testimonialMainImg} alt="testimonial" className=" scale-[1.25] w-full  absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2" />
             </div>
 
             <div className={`${isLargeScreen? "w-[50%]": "w-full"} main-testimonial-text-container`}>
-                <div className={`${isLargeScreen? "p-[40px]": "p-[20px]"} w-full pb-0 testimonial-header-container`}>
+                <div className={`${isLargeScreen? "p-[40px]": "p-[20px]"} w-full testimonial-header-container`}>
                     <h3 className={`${isLargeScreen? "text-[20px]" : "text-[18px]"} text-[#fb5b20] font-[600] testimonial-sub-header`}>TESTIMONIAL</h3>
                     <h2 className={`${isLargeScreen? "text-[45px]": isMediumScreen? "text-[30px]" : "text-[25px]"} text-white font-[800] team-main-header`}>OUR CLIENT SAY</h2>
                 </div>

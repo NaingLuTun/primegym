@@ -29,7 +29,7 @@ const Team = () => {
             <div className={`grid gap-[40px] ${isLargeScreen? "grid-cols-3": isMediumScreen? "grid-cols-2" : "grid-cols-1"} trainers-container`}>
                 {trainerImgs.map((img, index) => (
                     <div key={index} onMouseEnter={() => dispatch(setHoveredIndex(index))} onMouseLeave={() => dispatch(setHoveredIndex(null))} className={`h-fit overflow-hidden relative w-full rounded-md individual-img-container`}>
-                        <img src={img} alt="trainers" className="w-full rounded-md"/>
+                        <img src={img} alt="trainers" className={`${hoveredIndex === index? "scale-125" : ""} transition-all duration-500 w-full rounded-md`}/>
                         
                         <span className={`${hoveredIndex === index? "w-full h-full": "w-0 h-0"} transition-all duration-500 bg-[#1b1b1bc4] absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2`}></span>
 

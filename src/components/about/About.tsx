@@ -1,4 +1,4 @@
-import aboutImg from "../../assets/trainers-images/trainer-1.jpg"
+import aboutImg from "../../assets/about-images/about-img-1.jpg"
 
 import { useMediaQuery } from "react-responsive"
 
@@ -8,7 +8,7 @@ const About = () => {
   return (
     <div className={`flex ${isLargeScreen? "p-[40px] flex-row": "p-[20px] flex-col"}`}>
         <div className={`${isLargeScreen? "w-[45%] flex-grow mr-[40px]" : isMediumScreen? "w-full h-[500px]" : "w-full h-[250px]"}  overflow-hidden rounded-md relative about-img-container`}>
-            <img src={aboutImg} alt="trainer" className={`${isLargeScreen? "scale-[1.6]": ""} w-full absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2`}/>
+            <img src={aboutImg} alt="trainer" className={`${isLargeScreen? "scale-[1.5]": ""} w-full absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2`}/>
         </div>
         <div className={`${isLargeScreen? "w-[55%]" : "w-full"} about-texts-container`}>
             <h3 className={`${isLargeScreen? "text-[20px]" : "text-[18px]"} text-[#fb5b20] font-[600] about-sub-heading`}>ABOUT US</h3>

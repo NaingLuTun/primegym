@@ -5,6 +5,7 @@ import Schedule from "./components/schedule/Schedule"
 import Stats from "./components/stats/Stats"
 import Team from "./components/team/Team"
 import Testimonial from "./components/testimonial/Testimonial"
+import Blog from "./components/blog/Blog"
 function App() {
 
   return (
@@ -16,6 +17,7 @@ function App() {
       <Stats />
       <Team />
       <Testimonial />
+      <Blog />
     </>
   )
 }
