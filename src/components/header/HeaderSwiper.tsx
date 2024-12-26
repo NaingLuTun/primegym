@@ -18,7 +18,6 @@ const HeaderSwiper = () => {
         navigation={{
             nextEl: ".next-button",
             prevEl: ".prev-button",
-            hideOnClick: true,
         }}
         autoplay={{
             delay: 3000,
