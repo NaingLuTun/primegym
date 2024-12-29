@@ -21,11 +21,11 @@ const Footer = () => {
 
     const [hoveredIcon, setHoveredIcon] = useState<string | null>(null)
 
-    
+
 
   return (
     <div className={`${isLargeScreen? "p-[40px]":"p-[20px]"} bg-[#232429]`}>
-        <div className={`grid ${isLargeScreen? "grid-cols-3 gap-[40px]": "grid-cols-2 gap-[20px]"} main-footer-container`}>
+        <div className={`grid ${isLargeScreen? "grid-cols-3 gap-[40px]": isMediumScreen? "grid-cols-2 gap-[20px]" : "grid-cols-1 gap-[20px]"} main-footer-container`}>
             <div className=" individual-footer-links-container get-in-touch">
                 <h3 className={`${isLargeScreen? "text-[24px]": "text-[20px]"} text-white font-[500]`}>GET IN TOUCH</h3>
 
