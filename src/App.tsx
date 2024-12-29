@@ -6,6 +6,7 @@ import Stats from "./components/stats/Stats"
 import Team from "./components/team/Team"
 import Testimonial from "./components/testimonial/Testimonial"
 import Blog from "./components/blog/Blog"
+import Footer from "./components/footer/Footer"
 function App() {
 
   return (
@@ -18,6 +19,7 @@ function App() {
       <Team />
       <Testimonial />
       <Blog />
+      <Footer/>
     </>
   )
 }

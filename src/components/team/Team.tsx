@@ -2,12 +2,8 @@
 import { useMediaQuery } from "react-responsive"
 
 import { AppDispatch, RootState } from "../../state/store"
-import { setHoveredIndex } from "../../state/teamSlice/teamSlice"
+import { setHoveredIcon, setHoveredIndex } from "../../state/teamSlice/teamSlice"
 import { useSelector, useDispatch } from "react-redux"
-
-import twitterIcon from "../../assets/team-icons/twitter-154-svgrepo-com.svg"
-import facebookIcon from "../../assets/team-icons/facebook-176-svgrepo-com.svg"
-import linkedinIcon from "../../assets/team-icons/linkedin-161-svgrepo-com.svg"
 
 const Team = () => {
 
@@ -15,10 +11,14 @@ const Team = () => {
     const isLargeScreen = useMediaQuery({query: "(min-width: 1024px)"})
 
     const hoveredIndex = useSelector((state: RootState) => state.teamReducer.hoveredIndex)
+    const hoveredIcon = useSelector((state: RootState) => state.teamReducer.hoveredIcon)
     const trainerImgs = useSelector((state: RootState) => state.teamReducer.trainerImgs)
     const trainerNames = useSelector((state: RootState) => state.teamReducer.trainerNames)
+    const socialDarkIcons = useSelector((state: RootState) => state.teamReducer.teamSocialDarkIcons)
+    const socialLightIcons = useSelector((state: RootState) => state.teamReducer.teamSocialLightIcons)
 
     const dispatch = useDispatch<AppDispatch>()
+
     return (
         <div className={`p-[40px]`}>
             <div className="text-center mb-[40px] team-header-container">
@@ -34,14 +34,34 @@ const Team = () => {
                         <span className={`${hoveredIndex === index? "w-full h-full": "w-0 h-0"} transition-all duration-500 bg-[#1b1b1bc4] absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2`}></span>
 
                         <div className={`${hoveredIndex === index ? "opacity-1": "opacity-0"} absolute transition-all duration-500 bg-transparent top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex items-center gap-5 trainer-socials-container`}>
-                            <button className="w-[40px] p-3 bg-white rounded-full">
-                                <img src={twitterIcon} alt="twitter" className="w-full"/>
+                            <button
+                            onMouseEnter={() => dispatch(setHoveredIcon("twitter"))}
+                            onMouseLeave={() => dispatch(setHoveredIcon(null))}
+                            className="w-[40px] p-3 bg-white rounded-full transition-all duration-500 hover:bg-[#858585]">
+                                <img 
+                                src={hoveredIcon === "twitter"? socialLightIcons.twitterIconLight:socialDarkIcons.twitterIconDark} 
+                                alt="twitter" 
+                                className="w-full transition-all duration-500"/>
                             </button>
-                            <button className="w-[40px] p-3 bg-white rounded-full">
-                                <img src={facebookIcon} alt="facebook" className="w-full" />
+
+                            <button
+                            onMouseEnter={() => dispatch(setHoveredIcon("facebook"))}
+                            onMouseLeave={() => dispatch(setHoveredIcon(null))}
+                            className="w-[40px] p-3 bg-white rounded-full transition-all duration-500 hover:bg-[#858585]">
+                                <img 
+                                src={hoveredIcon === "facebook"? socialLightIcons.facebookIconLight:socialDarkIcons.facebookIconDark} 
+                                alt="facebook" 
+                                className="w-full transition-all duration-500" />
                             </button>
-                            <button className="w-[40px] p-3 bg-white rounded-full">
-                                <img src={linkedinIcon} alt="linkedin" className="w-full" />
+
+                            <button 
+                            onMouseEnter={() => dispatch(setHoveredIcon("linkedin"))}
+                            onMouseLeave={() => dispatch(setHoveredIcon(null))}
+                            className="w-[40px] p-3 bg-white rounded-full transition-all duration-500 hover:bg-[#858585]">
+                                <img 
+                                src={hoveredIcon === "linkedin"? socialLightIcons.linkedinIconLight:socialDarkIcons.linkedinIconDark} 
+                                alt="linkedin" 
+                                className="w-full transition-all duration-500" />
                             </button>
                         </div>
 
