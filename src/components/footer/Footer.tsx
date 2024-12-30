@@ -4,6 +4,8 @@ import locationIcon from "../../assets/footer-icon/location-pin-svgrepo-com.svg"
 import mailIcon from "../../assets/footer-icon/mail-open-svgrepo-com.svg"
 import phoneIcon from "../../assets/footer-icon/phone-flip-svgrepo-com.svg"
 
+import arrowIcon from "../../assets/footer-icon/footer-arrow.svg"
+
 import twitterIconDark from "../../assets/social-icons/twitter-icon-dark.svg"
 import twitterIconLight from "../../assets/social-icons/twitter-icon-light.svg"
 import facebookIconDark from "../../assets/social-icons/facebook-icon-dark.svg"
@@ -24,10 +26,10 @@ const Footer = () => {
 
 
   return (
-    <div className={`${isLargeScreen? "p-[40px]":"p-[20px]"} bg-[#232429]`}>
-        <div className={`grid ${isLargeScreen? "grid-cols-3 gap-[40px]": isMediumScreen? "grid-cols-2 gap-[20px]" : "grid-cols-1 gap-[20px]"} main-footer-container`}>
-            <div className=" individual-footer-links-container get-in-touch">
-                <h3 className={`${isLargeScreen? "text-[24px]": "text-[20px]"} text-white font-[500]`}>GET IN TOUCH</h3>
+    <div className={`${isLargeScreen? "pr-[40px] pl-[40px]":""} relative bg-[#232429]`}>
+        <div className={`grid ${isLargeScreen? "grid-cols-3 gap-[40px]": isMediumScreen? "grid-cols-2" : "grid-cols-1"} main-footer-container`}>
+            <div className={`${isLargeScreen? "pt-[40px] pb-[80px]":"p-[20px] pb-[40px]" } individual-footer-links-container get-in-touch`}>
+                <h3 className={`${isLargeScreen? "text-[24px]": "text-[20px]"} text-white font-[500] mb-[24px]`}>GET IN TOUCH</h3>
 
                 <li className="list-none contacts-container">
                     <ul className="flex items-center gap-[5px] mb-4 location-info-container">
@@ -76,12 +78,53 @@ const Footer = () => {
                     
                 </li>
             </div>
-            <div>
-                <h3>QUICK LINKS</h3>
+            <div className={`${isLargeScreen? "pt-[40px] pb-[80px]":"p-[20px] pb-[40px]" } individual-footer-links-container quick-links`}>
+                <h3 className={`${isLargeScreen? "text-[24px]": "text-[20px]"} text-white font-[500] mb-[24px]`}>QUICK LINKS</h3>
+
+                <li className="list-none quick-links-container">
+                    <ul className="flex items-center gap-[5px] mb-4 location-info-container">
+                        <img src={arrowIcon} alt="click" className="w-[20px]" />
+                        <a href="#" className={`${isLargeScreen? "text-[16px]" : "text-[14px]"} text-[#BDBDBF]`}>Home</a>
+                    </ul>
+                    <ul className="flex items-center gap-[5px] mb-4 location-info-container">
+                        <img src={arrowIcon} alt="click" className="w-[20px]" />
+                        <a href="#" className={`${isLargeScreen? "text-[16px]" : "text-[14px]"} text-[#BDBDBF]`}>About us</a>
+                    </ul>
+                    <ul className="flex items-center gap-[5px] mb-4 location-info-container">
+                        <img src={arrowIcon} alt="click" className="w-[20px]" />
+                        <a href="#" className={`${isLargeScreen? "text-[16px]" : "text-[14px]"} text-[#BDBDBF]`}>Classes</a>
+                    </ul>
+                    <ul className="flex items-center gap-[5px] mb-4 location-info-container">
+                        <img src={arrowIcon} alt="click" className="w-[20px]" />
+                        <a href="#" className={`${isLargeScreen? "text-[16px]" : "text-[14px]"} text-[#BDBDBF]`}>Trainers</a>
+                    </ul>
+                    <ul className="flex items-center gap-[5px] mb-4 location-info-container">
+                        <img src={arrowIcon} alt="click" className="w-[20px]" />
+                        <a href="#" className={`${isLargeScreen? "text-[16px]" : "text-[14px]"} text-[#BDBDBF]`}>Blogs</a>
+                    </ul>
+                    <ul className="flex items-center gap-[5px] mb-4 location-info-container">
+                        <img src={arrowIcon} alt="click" className="w-[20px]" />
+                        <a href="#" className={`${isLargeScreen? "text-[16px]" : "text-[14px]"} text-[#BDBDBF]`}>Contact</a>
+                    </ul>
+                </li>
             </div>
 
-            <div className={`${!isLargeScreen? "col-span-2": ""}`}>
-                
+            <div className={`${!isLargeScreen && isMediumScreen? "col-span-2 p-[20px]": " p-[40px]"} relative flex flex-col justify-center items-center z-20 bg-[#fb5b20]  `}>
+                <h3 className={`${isLargeScreen? "text-[24px]": "text-[20px]"} text-white font-[500] mb-[24px]`}>NEWSLETTER</h3>
+                <h4 className="text-white font-[500] mb-2">SUBSCRIBE OUR NEWSLETTER</h4>
+                <p className="text-white text-center mb-2">Stay motivated and get the latest fitness tips. Subscribe to the PRIMEGYM newsletter today!</p>
+
+                <div className="flex rounded-md w-fit">
+                    <input type="text" placeholder="Your Email" className="max-w-[150px] bg-white rounded-l-md p-[16px] focus:outline-none focus:border-none" />
+                    <button className="text-white bg-[#232429] p-[16px] rounded-r-md text-nowrap">SIGN UP</button>
+                </div>
+
+                {isLargeScreen? (<p className="text-white absolute bottom-[20px]">Developed by <span className="font-[500]">Naing Lu Tun</span></p>): null}
+            </div>
+
+            <div className={`${isLargeScreen? "absolute bottom-0 left-0 w-full " : isMediumScreen? "col-span-2 flex justify-between" : "flex justify-between"} items-center z-10 p-[20px] pl-[50px] pr-[50px]  bg-[#111]`}>
+                <p className="text-[#BDBDBF]">&copy; <span className="text-white font-[500]">PRIMEGYM</span>. All Rights Reserved</p>
+                {!isLargeScreen? (<p className="text-white">Developed by <span className="font-[500]">Naing Lu Tun</span></p>): null}
             </div>
         </div>
     </div>
