@@ -2,8 +2,8 @@ import testimonialMainImg from "../../assets/testimonial-images/testimonial-main
 import testimonialProfile1 from "../../assets/testimonial-images/testimonial-profile-1.jpg"
 import testimonialProfile2 from "../../assets/testimonial-images/testimonial-profile-2.jpg"
 import quoteIcon from "../../assets/testimonial-images/quote-right-svgrepo-com.svg"
-import rightArrowIcon from "../../assets/testimonial-images/right-arrow.svg"
-import leftArrowIcon from "../../assets/testimonial-images/left-arrow.svg"
+import rightArrowIcon from "../../assets/testimonial-images/right-arrow-short.svg"
+import leftArrowIcon from "../../assets/testimonial-images/left-arrow-short.svg"
 
 import { useMediaQuery } from 'react-responsive';
 
