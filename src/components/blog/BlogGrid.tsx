@@ -18,8 +18,8 @@ const BlogGrid = () => {
     return (
         <>  
             {blogInfo.map((blog, index) => (
-                <Link key={blog.blogTitle} to={`/${blog.blogTitle}`}>
-                    <div
+                <Link key={blog.blogTitle} to={`/blogs/${blog.blogTitle.split(" ").join("_")}`}>
+                    <div    
                     onMouseEnter={() => dispatch(setHoveredBlog(index))}
                     onMouseLeave={() => dispatch(setHoveredBlog(null))} className="w-full bg-[#232429] rounded-md individual-blog-container">
                         <div className="w-full rounded-t-md overflow-hidden blog-img-container">

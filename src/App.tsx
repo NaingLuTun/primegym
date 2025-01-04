@@ -2,8 +2,11 @@ import BlogDetail from "./pages/blog-page/BlogDetail"
 import BlogPage from "./pages/blog-page/BlogPage"
 import HomePage from "./pages/home-page/HomePage"
 
+
 import { BrowserRouter as Router, Route, Navigate, Routes } from "react-router-dom"
 function App() {
+
+
 
   return (
     <>
@@ -15,6 +18,7 @@ function App() {
 
           {/* blog page */}
           <Route path="/blogs" element={<BlogPage />} />
+          {/* "/:blogTitle to dynamially access the url path" */}
           <Route path="/blogs/:blogTitle" element={<BlogDetail />}/>
           
           {/* default page */}
