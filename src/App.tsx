@@ -1,9 +1,30 @@
-import HomePage from "./pages/HomePage"
+import BlogDetail from "./pages/blog-page/BlogDetail"
+import BlogPage from "./pages/blog-page/BlogPage"
+import HomePage from "./pages/home-page/HomePage"
+
+import { BrowserRouter as Router, Route, Navigate, Routes } from "react-router-dom"
 function App() {
 
   return (
     <>
-      <HomePage />
+      <Router basename="/primegym">
+        <Routes>
+
+          {/* home page */}
+          <Route path="/home" element={<HomePage />} />
+
+          {/* blog page */}
+          <Route path="/blogs" element={<BlogPage />} />
+          <Route path="/blogs/:blogTitle" element={<BlogDetail />}/>
+          
+          {/* default page */}
+          <Route path="/" element={<Navigate to="/home" />}/>
+
+          {/* error page */}
+          <Route path="*" element={<Navigate to="/home" />} />
+        </Routes>
+      </Router>
+      
     </>
   )
 }
