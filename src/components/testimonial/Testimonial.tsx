@@ -21,7 +21,7 @@ const Testimonial = () => {
     return (
         <div className={`flex  w-full bg-[#232429] ${isLargeScreen? "flex-row": "flex-col"}`}>
             <div className={`${isLargeScreen? "w-[50%] h-[800px]": isMediumScreen ? "w-full h-[800px]" : "w-full h-[500px]"} overflow-hidden relative flex-grow  main-testimonial-img-container`}>
-                <img src={testimonialMainImg} alt="testimonial" className=" scale-[1.25] w-full  absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2" />
+                <img src={testimonialMainImg} alt="testimonial" className=" scale-[1.3] w-full  absolute top-[10%]  left-1/2 -translate-x-1/2 " />
             </div>
 
             <div className={`${isLargeScreen? "w-[50%]": "w-full"} main-testimonial-text-container`}>
