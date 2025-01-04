@@ -1,3 +1,4 @@
+import AboutPage from "./pages/about-page/AboutPage"
 import BlogDetail from "./pages/blog-page/BlogDetail"
 import BlogPage from "./pages/blog-page/BlogPage"
 import HomePage from "./pages/home-page/HomePage"
@@ -15,6 +16,9 @@ function App() {
 
           {/* home page */}
           <Route path="/home" element={<HomePage />} />
+
+          {/* about page */}
+          <Route path="/about" element={<AboutPage/>}/>
 
           {/* blog page */}
           <Route path="/blogs" element={<BlogPage />} />
