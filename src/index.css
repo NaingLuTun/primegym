@@ -88,12 +88,12 @@
             height: 0px;
         }
         100% {
-            height: 250px;
+            height: 280px;
         }
     }
     @keyframes hideMenu {
         0%{
-            height: 250px;
+            height: 280px;
         }
         100% {
             height: 0px;
