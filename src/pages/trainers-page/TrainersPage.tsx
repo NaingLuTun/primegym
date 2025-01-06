@@ -1,4 +1,4 @@
-import React from 'react'
+
 import Nav from '../../components/nav/Nav'
 import Team from '../../components/team/Team'
 import Footer from '../../components/footer/Footer'
