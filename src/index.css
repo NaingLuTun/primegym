@@ -118,4 +118,17 @@
             opacity: 1;
         }
     }
+
+    .contactInputStyle {
+        width: 100%;
+        background-color: white;
+        border: 1px solid #9c9c9c98;
+        border-radius: 6px;
+        padding: 16px;
+    }
+
+    .contactInputStyle:focus {
+        outline: none;
+        border: 1px solid #fb5b20;
+    }
 }

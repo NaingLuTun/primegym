@@ -9,7 +9,7 @@ const HeroComponent = () => {
     /* To get the path name */
     const currentUrlLocation = useLocation()
     const pathName = currentUrlLocation.pathname
-
+    
     /* split the path name at "/" */
     const dividedPathName = pathName.split("/")
 
